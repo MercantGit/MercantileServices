@@ -1,0 +1,869 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body{
+  background-color: rgb(229 229 229);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+header{
+  display: flex;
+  width: 100%;
+}
+
+.spaceLogo{
+  margin: 0.5% 47% 0.5% 3%;
+  display: flex;
+  width: 3.9%;
+}
+
+#logo{
+  width: 100%;
+}
+
+.governance{
+  display: flex;
+  width: 0%;
+  justify-content: center;
+  padding: 0.7% 3.2%;
+  margin: 1% 1.5%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3vw;
+}
+
+.browse{
+  display: flex;
+  width: 0%;
+  justify-content: center;
+  padding: 0.7% 1.8%;
+  margin: 1% 0.8%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3vw;
+}
+
+.lauchApp{
+  display: flex;
+  width: 8%;
+  justify-content: center;
+  padding: 0.3% 0.6%;
+  background-color: white;
+  margin: 1.3% 1.5%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3vw;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 5px 5px 5px black;
+}
+
+#logo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.governance:hover{
+  font-weight: bold;
+}
+
+.browse:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lauchApp:hover{
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.671);
+}
+
+.active{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nom{
+  font-size: 6vw;
+  width: 100%;
+  margin: 12% 30% 14% 30%;
+  text-align: center;
+  font-family: Copperplate Gothic Light;
+}
+
+footer{
+  display: flex;
+  width: 100%;
+}
+
+.spitchBox{
+  width: 70%;
+  margin: 0% 0% 0% 20%
+}
+
+.text1{
+  color: black;
+  font-size: 1.4vw;
+}
+
+#twitter{
+  width: 5%;
+  margin: 0.7% 0.7%;
+}
+
+#telegram{
+  width: 5%;
+  margin: 1% 0.7% 0.4% 0.7%;
+}
+
+#twitter:hover{
+  transform: scale(1.1);
+}
+
+#telegram:hover{
+  transform: scale(1.1);
+}
+
+.affiliateBox{
+  width: 30%;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+  margin: 0% 15% 0% 15%;
+}
+
+.text2{
+  color: black;
+  font-size: 1vw;
+  text-align: center;
+  padding: 3% 0% 0.5% 0%;
+}
+
+.text3{
+  color: black;
+  font-size: 2vw;
+  text-decoration: underline;
+  margin: 0% 21%;
+  padding: 0.5% 0% 3% 0%;
+}
+
+/* BACKTEST PAGE */
+
+.dateSpace{
+  display: flex;
+  width: 100%;
+}
+
+#startInput{
+  width: 25%;
+  display: flex;
+  margin: 5% 9.5% 0% 19%;
+  padding: 0.5%;
+}
+
+#executionInput{
+  width: 25%;
+  display: flex;
+  margin: 5% 12% 0% 9.5%;
+  padding: 0.5%;
+}
+
+.dateTitle{
+  padding: 1% 2%;
+  font-size: 1.3vw;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.dateInput{
+  width: 30%;
+  margin: 0% 5%;
+  padding: 1% 2%;
+  font-size: 0.8vw;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.typeBox{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 8%;
+  margin: 2% 46% 0% 46%;
+  font-size: 1.3vw;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.callType{
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+}
+
+.putType{
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+}
+
+.callType:hover{
+  background-color: rgb(1, 168, 1);
+  cursor: pointer;
+}
+
+.putType:hover{
+  background-color: rgb(245, 77, 77);
+  cursor: pointer;
+}
+
+.activeCall{
+  background-color: rgb(1, 168, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.activePut{
+  background-color: rgb(245, 77, 77);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.buyBox{
+  display: flex;
+  width: 30%;
+  margin: 1% 8% 5% 12%;
+  background-color: white;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+  font-size: 1.3vw;
+}
+
+.labelAmount{
+  display: flex;
+  margin: 3% 0% 3% 8%;
+  width: 72%;
+  font-weight: bold;
+}
+
+.select{
+  width: 12%;
+  margin: 3% 7% 3% 1%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.label{
+  display: flex;
+  width: 100%;
+  margin: 3% 8%;
+  font-weight: bold;
+}
+
+.labelName {
+  margin: auto 0%;
+}
+
+.input{
+  width: 54%;
+  padding: 2.2% 3.5%;
+  text-align : right;
+  float: right;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#amountInput{
+  width: 46%;
+  margin: 0% 0% 0% auto;
+  padding: 2.5% 3.5%;
+  text-align : right;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#strikeInput{
+  margin: 0% 0% 0% auto;
+}
+
+#expirationInput{
+  margin: 0% 0% 0% auto;
+}
+
+.premiumContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.premium{
+  width: 30%;
+  padding: 2%;
+  margin: 2% 10%;
+  background-color: rgba(79, 142, 184, 0.452);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.resultPremium{
+  width: 40%;
+  padding: 2%;
+  margin: 2% 0%;
+  text-align: center;
+}
+
+.resultBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: 1% 12% 7.5% 8%;
+  padding: 1%;
+  background-color: white;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.dashboardTitle{
+  width: 30%;
+  padding: 1%;
+  margin: 3% 35% 5% 35%;
+  font-size: 1.4vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.infoSpace{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1.5% 5%;
+}
+
+.refundableSubTitle{
+  width: 45%;
+  padding: 1%;
+  margin: auto 0%;
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(79, 142, 184, 0.452);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1px;
+}
+
+.earningSubTitle{
+  width: 45%;
+  padding: 1%;
+  margin: auto 0%;
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(57, 151, 88, 0.452);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1px;
+}
+
+.receiveSubTitle{
+  width: 45%;
+  padding: 1%;
+  margin: auto 0%;
+  font-size: 1.3vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1px;
+}
+
+.resultInfos{
+  width: 55%;
+  padding: 2%;
+  margin: 0% 0%;
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+.chart{
+  width: 80%;
+  margin: 0% 10% 5% 10%;
+  height: 800px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 1px black;
+}
+
+/* FAQ PAGE */
+
+.faqText{
+  font-size: 1vw;
+  width: 40%;
+  margin: 3% 0% 0% 10%;
+  text-align: justify;
+}
+
+.faqNom{
+  font-size: 4vw;
+  width: 30%;
+  margin: 14% 10% 5% 10%;
+  text-align: center;
+  font-family: Copperplate Gothic Light;
+}
+
+/* JOBS PAGE */
+
+.jobsText{
+  font-size: 1vw;
+  width: 40%;
+  margin: 5% 0% 0% 10%;
+}
+
+.jobsNom{
+  font-size: 4vw;
+  width: 30%;
+  margin: 14% 10% 5% 10%;
+  text-align: center;
+  font-family: Copperplate Gothic Light;
+}
+
+@media (max-width: 780px) {
+
+  .spaceLogo{
+      margin: 0.5% 26% 0.5% 3%;
+      width: 3.9%;
+  }
+
+  .governance{
+      width: 0%;
+      padding: 0.7% 6.4%;
+      margin: 1% 0.8%;
+      font-size: 2vw;
+  }
+  
+  .browse{
+      width: 0%;
+      padding: 0.7% 3.6%;
+      margin: 1% 0.8%;
+      font-size: 2vw;
+  }
+  
+  .lauchApp{
+      width: 12%;
+      padding: 0.3% 0.6%;
+      margin: 1.3% 1.5%;
+      font-size: 2vw;
+      border-radius: 4px;
+      border-width: 2px;
+      box-shadow: 2px 2px 2px black;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+  header{
+      flex-wrap: wrap;
+  }
+
+  .mobileHiden{
+    display: none;
+  }
+
+  .spaceLogo{
+      margin: 3% 40% 1%;
+      width: 20%;
+  }
+
+  .governance{
+      width: 100%;
+      padding: 0%;
+      margin: 3% 0% 3%;
+      font-size: 8vw;
+  }
+  
+  .browse{
+      width: 100%;
+      padding: 0%;
+      margin: 3% 0%;
+      font-size: 8vw;
+  }
+
+  .lauchApp{
+      width: 48%;
+      padding: 0.5%;
+      margin: 3% 26%;
+      font-size: 8vw;
+      border-radius: 4px;
+      border-width: 2px;
+      box-shadow: 2px 2px 2px black;
+  }
+
+  main{
+      display: flex;
+      width: 100%;
+      height: auto;
+  }
+
+  .nom{
+      font-size: 12vw;
+      width: 100%;
+      margin: 5% 0%;
+      text-align: center;
+      font-family: Copperplate Gothic Light;
+  }
+
+  footer{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+  
+  .spitchBox{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0%;
+  }
+  
+  .text1{
+      width: 100%;
+      color: black;
+      font-size: 3.5vw;
+      text-align: center;
+  }
+
+  .socialLogos{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 1% 0% 1% 15%;
+  }
+
+  .socialLogos a{
+      width: 50%;
+  }
+  
+  #twitter{
+      width: 20%;
+      margin: 1% 30%;
+  }
+  
+  #telegram{
+      width: 20%;
+      margin: 1% 30%;
+  }
+  
+  
+  .affiliateBox{
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      margin: 3% 25%;
+      padding: 2%;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 2px;
+      background-color: white;
+  }
+  
+  .text2{
+      font-size: 3.5vw;
+      padding: 0%;
+      text-align: center;
+  }
+  
+  .text3{
+      width: 100%;
+      margin: 0%;
+      padding: 0%;
+      font-size: 4vw;
+      text-align: center;
+  }
+
+  .faqText{
+      font-size: 3.3vw;
+      width: 100%;
+      margin: 5%;
+  }
+
+  .faqNom{
+      display: none;
+  }
+
+  .jobsText{
+      font-size: 4vw;
+      width: 100%;
+      margin: 5%;
+  }
+
+  .jobsNom{
+      display: none;
+  }
+
+  .dateSpace{
+    display: flex;
+    width: 100%;
+  }
+  
+  #startInput{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0%;
+  }
+  
+  #executionInput{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0%;
+  }
+  
+  .dateTitle{
+    padding: 1% 1.5%;
+    font-size: 3.5vw;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .dateInput{
+    width: 30%;
+    margin: 0% 1.5%;
+    padding: 1% 2%;
+    font-size: 2vw;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .buyBox{
+    display: flex;
+    width: 80%;
+    margin: 1% 10% 5% 10%;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5%;
+    font-size: 3.3vw;
+  }
+  
+  .labelAmount{
+    display: flex;
+    margin: 3% 0% 3% 8%;
+    width: 72%;
+    font-weight: bold;
+  }
+  
+  .select{
+    width: 12%;
+    margin: 3% 7% 3% 1%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+  }
+  
+  .label{
+    display: flex;
+    width: 100%;
+    margin: 3% 8%;
+    font-weight: bold;
+  }
+  
+  .labelName {
+    margin: auto 0%
+  }
+  
+  .input{
+    width: 54%;
+    padding: 2.2% 3.5%;
+    text-align : right;
+    float: right;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  #amountInput{
+    width: 46%;
+    margin: 0% 0% 0% auto;
+    padding: 2.5% 3.5%;
+    text-align : right;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  #strikeInput{
+    margin: 0% 0% 0% auto;
+  }
+  
+  #expirationInput{
+    margin: 0% 0% 0% auto;
+  }
+  
+  .premiumContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .premium{
+    width: 40%;
+    padding: 2%;
+    margin: 2% 10%;
+    background-color: rgba(79, 142, 184, 0.452);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .resultPremium{
+    width: 40%;
+    padding: 2%;
+    margin: 2% 0%;
+    text-align: center;
+  }
+  
+  .resultBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1% 10% 3% 10%;
+    padding: 1%;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .dashboardTitle{
+    width: 30%;
+    padding: 1%;
+    margin: 3% 35% 5% 35%;
+    font-size: 3.3vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .infoSpace{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1.5% 5%;
+  }
+  
+  .refundableSubTitle{
+    width: 45%;
+    padding: 1%;
+    margin: auto 0%;
+    font-size: 3.3vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(79, 142, 184, 0.452);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
+  }
+  
+  .earningSubTitle{
+    width: 45%;
+    padding: 1%;
+    margin: auto 0%;
+    font-size: 3.3vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(57, 151, 88, 0.452);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
+  }
+  
+  .receiveSubTitle{
+    width: 45%;
+    padding: 1%;
+    margin: auto 0%;
+    font-size: 3.3vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
+  }
+  
+  .resultInfos{
+    width: 55%;
+    padding: 2%;
+    margin: 0% 0%;
+    font-size: 3.3vw;
+    text-align: center;
+  }
+    
+}

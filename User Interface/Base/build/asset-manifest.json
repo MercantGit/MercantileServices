@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3d0af65.css",
+    "main.js": "/static/js/main.51fd5ab4.js",
+    "static/media/Logo.png": "/static/media/Logo.2ffd91b9d53ddaf6f0aa.png",
+    "static/media/Youtube.png": "/static/media/Youtube.dbe559b4195ff3a77293.png",
+    "static/media/Bitcoin.png": "/static/media/Bitcoin.9bc86613b468de915cfc.png",
+    "static/media/Ethereum.png": "/static/media/Ethereum.0f54f490c17423301716.png",
+    "static/media/Telegram.png": "/static/media/Telegram.df349f8780534b3db905.png",
+    "index.html": "/index.html",
+    "main.e3d0af65.css.map": "/static/css/main.e3d0af65.css.map",
+    "main.51fd5ab4.js.map": "/static/js/main.51fd5ab4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3d0af65.css",
+    "static/js/main.51fd5ab4.js"
+  ]
+}
