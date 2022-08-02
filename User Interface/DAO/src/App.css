@@ -1,0 +1,809 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body{
+  background-color: rgb(229 229 229);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+header{
+  display: flex;
+  width: 100%;
+}
+
+.spaceLogo{
+  margin: 1% 14% 3.9% 3.8%;
+  display: flex;
+  width: 3.2%;
+}
+
+.spaceLogo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#logo{
+  width: 100%;
+}
+
+.browse{
+  display: flex;
+  width: 26%;
+  justify-content: center;
+  margin: 4% 19% 1% 16%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3vw;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+
+}
+
+.browseButton{
+  display: flex;
+  padding: 2.5% 5%;
+  justify-content: center;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.1px;
+}
+
+.browseButton:hover{
+  transform: scale(1.1);
+}
+
+.active{
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+#errorMessage{
+  width: 100%;
+  margin: 1% 0% 0% 0%;
+  text-align: center;
+}
+
+.chain{
+  display: flex;
+  width: 6%;
+  align-items: center;
+  margin: 2% 0.2% 4% 0.2%;
+  font-size: 1vw;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.chain:hover{
+  background-color: rgba(255, 255, 255, 0.486);
+}
+
+#chainLogo{
+  width: 20%;
+  margin: 0% 5%;
+}
+
+#walletMessage{
+  width: 10%;
+  padding: 0.3%;
+  margin: 2% 0.2% 4% 0.2%;
+  font-size: 1vw;
+  color: white;
+  justify-content: center;
+  background-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.wallet:hover{
+  color: rgba(255, 255, 255, 0.404);
+}
+
+.walletChoiceBox{
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 16.5%;
+  margin: 5% 0.2% 0% 82%;
+  background-color: white;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.walletSpace {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 3% 8%;
+  justify-content: center;
+}
+
+.walletLogo {
+  width: 13%;
+}
+
+.walletName {
+  width: 70%;
+  font-size: 1.1vw;
+  text-align: center;
+  margin: auto 0%;
+}
+
+.walletSpace:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.loader {
+  position: absolute;
+  top: 40%; left: 48.8%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #000000; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*
+!!! Information PAGE !!!
+*/
+
+.informationBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 10% 0% 10%;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.firstSpitch{
+  width: 80%;
+  margin: 2% 10% 0.3% 10%;
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+.secondSpitch{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0.3% 25% 0.3% 25%;
+}
+
+#mercLogo{
+  width: 13.3%;
+  margin: 1% 1%
+}
+
+.secondSpitchText{
+  display: flex;
+  flex-wrap: wrap;
+  width: 81%;
+  margin: 1% 1%;
+  font-size: 1.1vw;
+}
+
+.useCases{
+  width: 40%;
+  margin: 0% 0% 0% 10%;
+  padding: 2% 0%;
+  font-size: 1.1vw;
+}
+
+.informationSpitch{
+  display: flex;
+  flex-wrap: wrap;
+  width: 81%;
+  margin: 0% 18%;
+}
+
+.informationSpitchSpace{
+  width: 100%;
+  margin: 0% 0%;
+  font-size: 1.1vw;
+}
+
+.redirectionSpace{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0% 20%;
+}
+
+.redirectionBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: 4% 5%;
+  background-color: rgba(95, 93, 93, 0.356);
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#redirectionLogo{
+  width: 15%;
+  margin: 4% 66% 1% 4%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+}
+
+#snapshotLogo{
+  width: 20%;
+  margin: 4% 66% 1% 4%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+}
+
+.redirectionLink{
+  color: black;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: bold;
+  margin: 1% 4%;
+}
+
+.redirectionLink:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.spitchBox{
+  font-size: 1vw;
+  margin: 1% 4%;
+}
+
+/*
+!!! Dashboard PAGE !!!
+*/
+
+.firstDashboardBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 10% 0% 10%;
+  background-color: white;
+  border-radius: 40px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.boxTitle{
+  width: 100%;
+  margin: 1% 0% 0% 0%;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.leftPart{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 2% 2%;
+}
+
+.rightPart{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 2% 2%;
+}
+
+.analyticsSpace{
+  display: flex;
+  width: 80%;
+  margin: 0% 10% 1% 10%;
+}
+
+.analyticsSubTitle{
+  width: 45%;
+  margin: 0% 5%;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.analyticsInfos{
+  width: 35%;
+  margin: 0% 5%;
+  font-size: 1.2vw;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.analyticsInfosDividends{
+  width: 29%;
+  margin: 0% 0% 0% 5%;
+  font-size: 1.2vw;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.analyticsInfosEarnings{
+  width: 25%;
+  margin: 0% 0% 0% 5%;
+  font-size: 1.2vw;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.secondDashboardBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 10% 0% 10%;
+  background-color: white;
+  border-radius: 40px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#amoutInput{
+  width: 63%;
+  margin: 1% 35.5% 1% 1.5%;
+  padding: 0% 1%;
+  text-align : right;
+  font-size: 1vw;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.leftButtonSpace{
+  display: flex;
+  width: 100%;
+}
+
+.leftButton{
+  width: 30%;
+  margin: 0% 1.5%;
+  background-color: rgb(187, 183, 183);
+  text-align: center;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.claimButton{
+  width: 11%;
+  background-color: rgb(10, 197, 10);
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.dispatchButton{
+  width: 15%;
+  background-color: rgb(10, 197, 10);
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+#addressInput{
+  width: 55.1%;
+  margin: 1% 23.2% 1% 13.8%;
+  padding: 0% 1%;
+  text-align : right;
+  font-size: 1vw;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.rightButtonSpace{
+  display: flex;
+  width: 100%;
+  margin: 0% 0% 0% 12.5%;
+}
+
+.rightButton{
+  width: 30%;
+  margin: 0% 1.5%;
+  background-color:rgb(187, 183, 183);
+  text-align: center;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.userInfos{
+  width: 100%;
+  margin: 2% 0%;
+  text-align: center;
+}
+
+#hashLink{
+  color: black;
+  text-decoration: none;
+}
+
+#hashLink:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.needSpace{
+  width: 100%;
+  margin: 2.4% 0%
+}
+
+/*
+!!! Governance PAGE !!!
+*/
+
+.governanceBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 10% 0% 10%;
+  background-color: white;
+  border-radius: 40px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.leftPartInfos{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 0% 2%;
+}
+
+.rightPartInfos{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 0% 2%;
+}
+
+.leftSpace{
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  margin: 0% 0% 2% 2%;
+}
+
+.rightSpace{
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  margin: 0% 2% 2% 0%;
+}
+
+.contractBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1% 10% 1% 10%;
+  padding: 1% 0%;
+  background-color: rgba(88, 88, 88, 0.342);
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.contractBoxTitle{
+  width: 30%;
+  margin: 1% 35% 3% 35%;
+  padding: 1%;
+  text-align: center;
+  font-size: 1.3vw;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.inputSpace{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.8% 0%;
+}
+
+.governanceButton{
+  width: 30%;
+  margin: 0% 1.5%;
+  background-color:  rgb(187, 183, 183);
+  text-align: center;
+  font-size: 1vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.simpleInput{
+  width: 30%;
+  margin: 0% 1%;
+  padding: 0% 1%;
+  text-align : right;
+  font-size: 1vw;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.doubleInput{
+  width: 30%;
+  margin: 0% 1%;
+  padding: 0% 1%;
+  text-align : right;
+  font-size: 1vw;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.tripleInput{
+  width: 20%;
+  margin: 0% 1%;
+  padding: 0% 1%;
+  text-align : right;
+  font-size: 1vw;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#pricerAmount{
+  margin: 0% 0% 0% 1.5%;
+}
+
+@media (max-width: 780px) {
+  .spaceLogo{
+    margin: 1% 14% 3.9% 3.8%;
+    display: flex;
+    width: 3.2%;
+  }
+  
+  .browse{
+    width: 26%;
+    margin: 4% 19% 1% 16%;
+    font-size: 1.3vw;
+    border-radius: 4px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  
+  }
+  
+  .chain{
+    width: 6%;
+    margin: 2% 0.2% 4% 0.2%;
+    font-size: 1vw;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+  
+  #walletMessage{
+    width: 10%;
+    padding: 0.3%;
+    margin: 2% 0.2% 4% 0.2%;
+    font-size: 1vw;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+
+  .informationBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .firstDashboardBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .secondDashboardBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .governanceBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .contractBox{
+    width: 100%;
+    margin: 1% 10% 1% 10%;
+    padding: 1% 0%;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .spaceLogo{
+    margin: 3% 42% 3%;
+    display: flex;
+    width: 16%;
+  }
+  
+  .browse{
+    display: none;
+  }
+  
+  .chain{
+    display: none;
+  }
+  
+  #walletMessage{
+    display: none;
+  }
+
+  .informationBox{
+    width: 90%;
+    margin: 2% 5% 0% 5%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .firstSpitch{
+    width: 80%;
+    margin: 2% 10% 2% 10%;
+    font-size: 4vw;
+  }
+  
+  .secondSpitch{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0.3% 10% 3% 10%;
+  }
+  
+  #mercLogo{
+    width: 24%;
+    margin: 1% 0%
+  }
+  
+  .secondSpitchText{
+    width: 74%;
+    margin: 1% 1%;
+  }
+  
+  .useCases{
+    width: 40%;
+    margin: 0% 0% 0% 10%;
+    padding: 3% 0%;
+    font-size: 3vw;
+  }
+  
+  .informationSpitch{
+    width: 90%;
+    margin: 1% 5%;
+  }
+  
+  .informationSpitchSpace{
+    width: 100%;
+    margin: 0% 0%;
+    font-size: 3.3vw;
+  }
+  
+  .redirectionSpace{
+    width: 100%;
+    margin: 0% 2%;
+  }
+  
+  .redirectionBox{
+    width: 40%;
+    margin: 4% 5%;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  
+  #redirectionLogo{
+    width: 20%;
+    margin: 4% 66% 1% 4%;
+    border-radius: 2px;
+    border-width: 2px;
+  }
+  
+  #snapshotLogo{
+    width: 20%;
+    margin: 4% 66% 1% 4%;
+    border-radius: 2px;
+    border-width: 2px;
+  }
+  
+  .redirectionLink{
+    color: black;
+    text-decoration: none;
+    font-size: 3.3vw;
+    font-weight: bold;
+    margin: 1% 4%;
+  }
+  
+  .spitchBox{
+    font-size: 2.7vw;
+    margin: 1% 4%;
+  }
+
+  #errorMessage{
+    display: none;
+  }
+
+}

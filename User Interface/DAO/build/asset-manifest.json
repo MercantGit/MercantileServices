@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d4b94069.chunk.css",
+    "main.js": "/static/js/main.328ada4e.chunk.js",
+    "main.js.map": "/static/js/main.328ada4e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.71556df3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.71556df3.js.map",
+    "static/js/2.cc4776d2.chunk.js": "/static/js/2.cc4776d2.chunk.js",
+    "static/js/2.cc4776d2.chunk.js.map": "/static/js/2.cc4776d2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d4b94069.chunk.css.map": "/static/css/main.d4b94069.chunk.css.map",
+    "static/js/2.cc4776d2.chunk.js.LICENSE.txt": "/static/js/2.cc4776d2.chunk.js.LICENSE.txt",
+    "static/media/Ethereum.0f54f490.png": "/static/media/Ethereum.0f54f490.png",
+    "static/media/Logo.2ffd91b9.png": "/static/media/Logo.2ffd91b9.png",
+    "static/media/MetaMask.30289624.png": "/static/media/MetaMask.30289624.png",
+    "static/media/Polygon.3d20c65e.png": "/static/media/Polygon.3d20c65e.png",
+    "static/media/tokenLogo.97181d31.png": "/static/media/tokenLogo.97181d31.png",
+    "static/media/walletconnect.0aecac1d.png": "/static/media/walletconnect.0aecac1d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71556df3.js",
+    "static/js/2.cc4776d2.chunk.js",
+    "static/css/main.d4b94069.chunk.css",
+    "static/js/main.328ada4e.chunk.js"
+  ]
+}
