@@ -1,0 +1,1708 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body{
+  background-color: rgb(229 229 229);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+header{
+  display: flex;
+  width: 100%;
+}
+
+.spaceLogo{
+  margin: 1% 14% 3.9% 3.8%;
+  display: flex;
+  width: 3.2%;
+}
+
+#logo{
+  width: 100%;
+}
+
+#logo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.browse{
+  display: flex;
+  width: 26%;
+  justify-content: center;
+  margin: 4% 19% 1% 16%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3vw;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+
+}
+
+.browseButton{
+  display: flex;
+  padding: 2.5% 5%;
+  justify-content: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.1px;
+}
+
+.browseButton:hover{
+  transform: scale(1.1);
+}
+
+#errorMessage{
+  width: 100%;
+  margin: 1% 0% 0% 0%;
+  text-align: center;
+}
+
+.active{
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.chain{
+  display: flex;
+  width: 6%;
+  align-items: center;
+  margin: 2% 0.2% 4% 0.2%;
+  font-size: 1vw;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.chain:hover{
+  background-color: rgba(255, 255, 255, 0.486);
+}
+
+#chainLogo{
+  width: 20%;
+  margin: 0% 5%;
+}
+
+#walletMessage{
+  width: 10%;
+  padding: 0.3%;
+  margin: 2% 0.2% 4% 0.2%;
+  font-size: 1vw;
+  color: white;
+  justify-content: center;
+  background-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wallet:hover{
+  color: rgba(255, 255, 255, 0.404);
+}
+
+.walletChoiceBox{
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 16.5%;
+  margin: 5% 0.2% 0% 82%;
+  background-color: white;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.walletSpace {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 3% 8%;
+  justify-content: center;
+}
+
+.walletLogo {
+  width: 13%;
+}
+
+.walletName {
+  width: 70%;
+  font-size: 1.1vw;
+  text-align: center;
+  margin: auto 0%;
+}
+
+.walletSpace:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.loader {
+  position: absolute;
+  top: 40%; left: 48.8%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #000000; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.premiumLoader {
+  top: 40%; left: 48.8%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #000000; /* Blue */
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  animation: spin 2s linear infinite;
+}
+
+.chartLoader {
+  position: relative;
+  top: 40%; left: 48.8%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #000000; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* BUY PAGE */
+
+.typeBox{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 8%;
+  margin: 1.2% 46% 0% 46%;
+  font-size: 1.3vw;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.callType{
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+}
+
+.putType{
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+}
+
+.callType:hover{
+  background-color: rgb(1, 168, 1);
+  cursor: pointer;
+}
+
+.putType:hover{
+  background-color: rgb(245, 77, 77);
+  cursor: pointer;
+}
+
+.activeCall{
+  background-color: rgb(1, 168, 1);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.activePut{
+  background-color: rgb(245, 77, 77);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.box{
+  display: flex;
+  width: 100%;
+  margin: 5% 37% 5% 37%;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+  font-size: 1.3vw;
+}
+
+.labelAmount{
+  display: flex;
+  margin: 3% 0% 3% 8%;
+  width: 72%;
+  font-weight: bold;
+}
+
+.select{
+  width: 12%;
+  margin: 3% 0% 3% 0%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.label{
+  display: flex;
+  width: 100%;
+  margin: 3% 8%;
+  font-weight: bold;
+}
+
+.labelName {
+  margin: auto 0%
+}
+
+.input{
+  width: 54%;
+  padding: 2.2% 3.5%;
+  text-align : right;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.scaleButton:hover{
+  transform: scale(1.01);
+}
+
+#amountInput{
+  width: 46%;
+  margin: 0% 0% 0% auto;
+  padding: 2.5% 3.5%;
+  text-align : right;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#strikeInput{
+  margin: 0% 0% 0% auto;
+}
+
+#expirationInput{
+  margin: 0% 0% 0% auto;
+}
+
+.premiumContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.premium{
+  width: 30%;
+  padding: 2%;
+  margin: 5% 10%;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+/*  background-color: rgba(27, 26, 26, 0.452);*/
+
+.resultPremium{
+  width: 40%;
+  padding: 2%;
+  margin: 5% 0%;
+  text-align: center;
+}
+
+.helpButton{
+  width: 10%;
+}
+
+#helpLogo{
+  width :60%;
+  cursor: pointer;
+}
+
+#helpLogo:hover{
+  transform: scale(1.1);
+}
+
+.helpInfos{
+  position: absolute;
+  display: none;
+  width: 25%;
+  margin: 3% 5% 5% 65%;
+  padding: 2%;
+  text-align: justify;
+  font-size: 0.8vw;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.helpInfosTitle{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.needed{
+  color: red;
+}
+
+#buyContract{
+  width: 100%;
+  padding: 3% 0%;
+  margin: 2% 10%;
+  background-color: green;
+  font-size: 1.3vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.userInfos{
+  width: 100%;
+  font-size: 1vw;
+  text-align: center;
+}
+
+/*
+!!! EARN PAGE !!!
+*/
+
+.earnForm{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+  font-size: 1.3vw;
+}
+
+.earnSelect{
+  width: 100%;
+  margin: 0.3% 35% 2% 35%;
+  font-size: 1.4vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.AprContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.Apr{
+  width: 50%;
+  padding: 1%;
+  margin: 1% 10%;
+  /*text-align: center;*/
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  /*border-width: 2px;*/
+}
+
+.resultAPR{
+  width: 30%;
+  padding: 2%;
+  margin: 1% 0%;
+}
+
+#totalAPR{
+  text-decoration: underline;
+}
+
+.earnLabel{
+  display: flex;
+  width: 100%;
+  margin: 3% 8%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.amount{
+  width: 46%;
+  margin: 1% 0%;
+  text-align: center;
+}
+
+.earnInput{
+  width: 54%;
+  padding: 2% 3.5%;
+  text-align : right;
+  font-size: 1.2vw;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#hashLink{
+  color: black;
+  text-decoration: none;
+}
+
+#hashLink:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+/*
+!!! DASHBOARD PAGE !!!
+*/
+
+.dashboardSelect{
+  width: 6%;
+  margin: 2% 47% 0% 47%;
+  font-size: 1.4vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.contractBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  margin: 2% 8% 5% 17%;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.depositBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  margin: 2% 17% 5% 8%;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.dashboardTitle{
+  width: 30%;
+  padding: 1%;
+  margin: 3% 35%;
+  font-size: 1.3vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.infoSpace{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contractSubTitle{
+  width: 30%;
+  padding: 1%;
+  margin: 0% 10% 0% 17%;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.contractDashboardForm{
+  width: 100%;
+}
+
+.idLabel{
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  align-items: center;
+}
+
+#idInput{
+  width: 13%;
+  margin: 0% 1% 0% 18%;
+  text-align : center;
+  font-size: 1.2vw;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#questionLogo{
+  width: 5%;
+  margin: 1% 0%;
+}
+
+#questionLogo:hover{
+  cursor: pointer;
+}
+
+.contractAsset{
+  width: 6%;
+}
+
+#assetLogo{
+  width: 100%;
+}
+
+.contractType{
+  margin: 0% 0% 0% 25%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contractMethod{
+  display: none;
+  margin: 0% 0% 0% 13%;
+  padding: 0% 1%;
+  font-size: 1.2vw;
+}
+
+.contractMethod:hover{
+  cursor: pointer;
+}
+
+.method0{
+  text-decoration: line-through;
+}
+
+.contractAmount{
+  margin: auto 0%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contractStrike{
+  margin: auto 0%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.changeStrike{
+  display: flex;
+  width: 7.7%;
+  margin: 0% 0% 0% 2%;
+}
+
+#changeLogo:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.contractExpiration{
+  margin: auto 0%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contractLosses{
+  margin: auto 0%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.earningSpace{
+  display: flex;
+  width: 65%;
+  margin: 4% 0% 4% 20%
+}
+
+.earningSubTitle{
+  width: 45%;
+  padding: 1%;
+  margin: auto 0%;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(57, 151, 88, 0.452);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1px;
+}
+
+.contractEarning{
+  width: 45%;
+  margin: auto;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.helpButtonEarnings{
+  width: 10%;
+  margin: auto 0%;
+}
+
+#helpLogoEarnings{
+  width : 70%;
+  cursor: pointer;
+}
+
+#helpLogoEarnings:hover{
+  transform: scale(1.1);
+}
+
+.helpInfosEarnings{
+  position: absolute;
+  display: none;
+  width: 14%;
+  margin: 6% 43% 5% 43%;
+  padding: 2%;
+  text-align: justify;
+  font-size: 0.9vw;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.helpInfosMethod{
+  position: absolute;
+  display: none;
+  width: 14%;
+  margin: 6% 43% 5% 43%;
+  padding: 2%;
+  text-align: justify;
+  font-size: 0.9vw;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.helpInfosStrike{
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+  width: 14%;
+  margin: 8% 43% 5% 43%;
+  padding: 2%;
+  text-align: justify;
+  font-size: 0.9vw;
+  background-color: white;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.strikeText1{
+  width: 100%;
+  margin: 1% 0%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+.newStrikeResult{
+  width: 100%;
+  margin: 5% 0%;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.strikeText2{
+  width: 100%;
+  margin: 5% 0% 2% 0%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+#inputNewStrike{
+  width: 100%;
+  margin: 2% 0%;
+  padding: 2.5% 3.5%;
+  text-align : right;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;  
+}
+
+#buttonNewStrike{
+  width: 100%;
+  padding: 1% 0%;
+  margin: 5% 5% 3% 5%;
+  background-color: green;
+  text-align: center;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#buttonNewStrike:hover{
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+#executeContract{
+  width: 70%;
+  padding: 1% 0%;
+  margin: 0% 15% 4% 15%;
+  background-color: green;
+  font-size: 1.3vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+#refundContract{
+  width: 70%;
+  padding: 1% 0%;
+  margin: 0% 15% 4% 15%;
+  background-color: rgba(243, 153, 79, 0.836);
+  font-size: 1.3vw;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.spaceNeeded{
+  width: 100%;
+  margin: 2% 0%;
+}
+
+.deposits{
+  padding: 1%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.usdcClaimable{
+  margin: 0% 10% 0% 0%;
+  padding: 1%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mercClaimable{
+  margin: 0% 0% 0% 57%;
+  padding: 1%;
+  font-size: 1.2vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.claimUSDC{
+  width: 34%;
+  padding: 1%;
+  margin: 5% 1% 1% 15%;
+  background-color: green;
+  text-align: center;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.claimMERC{
+  width: 34%;
+  padding: 1%;
+  margin: 5% 15% 1% 1%;
+  background-color: green;
+  text-align: center;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.withdrawForm{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 2% 15% 0% 15%;
+  font-size: 1.3vw;
+}
+
+.withdrawLabel{
+  display: flex;
+  width: 100%;
+  margin: 0% 0% 4% 0%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.withdrawAmount{
+  width: 46%;
+  margin: 1% 0%;
+  text-align: center;
+}
+
+.withdrawInput{
+  width: 54%;
+  padding: 1%;
+  text-align : right;
+  font-size: 1.2vw;
+  background-color: rgba(138, 135, 135, 0.295);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#withdrawButton{
+  width: 100%;
+  padding: 1% 0%;
+  margin: 0% 0% 8% 0%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+/*
+!!! ANALYTICS PAGE !!!
+*/
+
+.analyticsBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 10% 0% 10%;
+  background-color: white;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.leftPart{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 2% 2%;
+}
+
+.rightPart{
+  display: flex;
+  flex-wrap: wrap;
+  width: 46%;
+  margin: 2% 2% 2% 2%;
+}
+
+.analyticsSpace{
+  display: flex;
+  width: 80%;
+  margin: 0% 10% 1% 10%;
+}
+
+.analyticsSubTitle{
+  width: 45%;
+  margin: 0% 5%;
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+
+.analyticsInfos{
+  width: 35%;
+  margin: 0% 5%;
+  font-size: 1.3vw;
+}
+
+.reverseMarketBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 1% 5% 1% 5%;
+  background-color: rgba(124, 120, 120, 0.726);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.reverseMarketTitle{
+  width: 50%;
+  margin: 1% 25% 0% 25%;
+  font-size: 1.3vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reverseMarketSpace{
+  display: flex;
+  flex-wrap: wrap;
+  width: 44%;
+  margin: 1% 3%;
+}
+
+.reverseMarketSubTitle{
+  width: 50%;
+  margin: 1% 3%;
+  font-size: 0.8vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reverseMarketInfos{
+  width: 38%;
+  margin: 1% 3%;
+  font-size: 0.8vw;
+}
+
+.graphBox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#assetGraph{
+  width: 5%;
+  margin: 0% 87% 0% 8%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.chart{
+  width: 40%;
+  margin: 1% auto;
+}
+
+/*
+!!! MEDIAS QUERIESE !!!
+*/
+
+
+@media (max-width: 1024px) {
+  
+  .box {
+    margin: 5% 37% 5% 37%;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .contractBox{
+    width: 25%;
+    margin: 2% 8% 5% 17%;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+  
+  .depositBox{
+    width: 25%;
+    margin: 2% 17% 5% 8%;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .analyticsBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .helpInfos{
+    width: 25%;
+    margin: 5% 5% 5% 65%;
+    padding: 2%;
+    font-size: 0.8vw;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .helpInfosEarnings{
+    width: 14%;
+    margin: 6% 43% 5% 43%;
+    padding: 2%;
+    font-size: 0.9vw;
+    border-radius: 40px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+}
+
+
+@media (max-width: 780px) {
+
+  .box {
+    width: 100%;
+    margin: 5% 20% 5% 20%;
+    border-radius: 50px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .contractBox{
+    width: 25%;
+    margin: 2% 8% 5% 17%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+  
+  .depositBox{
+    width: 25%;
+    margin: 2% 17% 5% 8%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .analyticsBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  #amountInput{
+    width: 62%;
+    margin: 0% 0% 0% auto;
+    padding: 2.5% 3.5%;
+    text-align : right;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  #strikeInput{
+    margin: 0% 0% 0% auto;
+  }
+  
+  #expirationInput{
+    margin: 0% 0% 0% auto;
+  }
+
+  .helpInfos{
+    width: 25%;
+    margin: 5% 5% 5% 65%;
+    padding: 2%;
+    font-size: 0.8vw;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .helpInfosEarnings{
+    width: 14%;
+    margin: 6% 43% 5% 43%;
+    padding: 2%;
+    font-size: 0.9vw;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+  
+  .browse{
+    width: 35%;
+    margin: 4% 10% 1% 12%;
+    font-size: 1.3vw;
+    border-radius: 4px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  
+  }
+  
+  .browseButton{
+    display: flex;
+    padding: 2.5% 5%;
+    justify-content: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.1px;
+  }
+  
+  .chain{
+    width: 8%;
+    margin: 2% 0.2% 4% 0.2%;
+    font-size: 1vw;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+  
+  #walletMessage{
+    width: 12%;
+    padding: 0.3%;
+    margin: 2% 0.2% 4% 0.2%;
+    font-size: 1vw;
+    border-radius: 4px;
+    border-width: 2px;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .spaceLogo{
+    margin: 3% 42% 3%;
+    display: flex;
+    width: 16%;
+  }
+  
+  .browse{
+    display: flex;
+    width: 80%;
+    margin: 1% 10% 1% 10%;
+    padding: 0% 3%;
+    font-size: 4vw;
+    border-radius: 6px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black; 
+  }
+  
+  .chain{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    margin: 2% 5% 2% 15%;
+    font-size: 4vw;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+  
+  #chainLogo{
+    width: 20%;
+    margin: 0% 5%;
+  }
+
+  #chainName{
+    width: 60%;
+    text-align: center;
+  }
+  
+  #walletMessage{
+    width: 30%;
+    padding: 0.3%;
+    margin: 2% 15% 2% 5%;
+    font-size: 3vw;
+    justify-content: center;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+
+  .walletChoiceBox{
+    width: 60%;
+    margin: 60% 20% 0% 20%;
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .walletSpace {
+    width: 80%;
+    margin: 3% 8%;
+  }
+  
+  .walletLogo {
+    width: 20%;
+  }
+  
+  .walletName {
+    width: 70%;
+    font-size: 4vw;
+    margin: auto 0%;
+  }
+  
+  .walletSpace:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .typeBox{
+    width: 30%;
+    margin: 0% 35% 0% 35%;
+    font-size: 3vw;
+  }
+
+  .box {
+    width: 100%;
+    margin: 7% 5% 5% 5%;
+    border-radius: 50px;
+    border-width: 2px;
+    box-shadow: 1px 1px 1px black;
+  }
+
+  .form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5%;
+    font-size: 3.3vw;
+  }
+  
+  .labelAmount{
+    display: flex;
+    margin: 3% 0% 3% 8%;
+    width: 72%;
+    font-weight: bold;
+  }
+  
+  .select{
+    width: 16%;
+    margin: 3% 0% 3% 0%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+  }
+  
+  .label{
+    display: flex;
+    width: 100%;
+    margin: 3% 8%;
+    font-weight: bold;
+  }
+  
+  .labelName {
+    margin: 1% 0%
+  }
+  
+  .input{
+    width: 54%;
+    padding: 2.2% 3.5%;
+    text-align : right;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  #amountInput{
+    width: 45%;
+    margin: 0% 0% 0% auto;
+    padding: 2.5% 3.5%;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  #strikeInput{
+    margin: 0% 0% 0% auto;
+  }
+  
+  #expirationInput{
+    margin: 0% 0% 0% auto;
+  }
+  
+  .helpInfosTitle{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .helpInfos{
+    width: 70%;
+    margin: 5% 15% 5% 15%;
+    padding: 2%;
+    font-size: 3vw;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  #buyContract{
+    width: 100%;
+    padding: 3% 0%;
+    margin: 2% 10%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .userInfos{
+    width: 100%;
+    font-size: 3vw;
+  }
+  
+  /*EarnPage*/
+  
+  .earnForm{
+    width: 100%;
+    margin: 5%;
+    font-size: 3.3vw;
+  }
+  
+  .earnSelect{
+    width: 100%;
+    margin: 0.3% 35% 2% 35%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .amount{
+    width: 46%;
+    margin: 1% 0%;
+    text-align: center;
+  }
+  
+  .earnInput{
+    width: 54%;
+    padding: 2% 3.5%;
+    text-align : right;
+    font-size: 3vw;
+    background-color: rgba(138, 135, 135, 0.295);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  /*DashboardPage*/
+
+  .dashboardSelect{
+    width: 15%;
+    margin: 2% 42.5% 0% 42.5%;
+    font-size: 3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .contractBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+    border-radius: 50px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .depositBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+    border-radius: 50px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .dashboardTitle{
+    width: 30%;
+    padding: 1%;
+    margin: 3% 35%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .contractSubTitle{
+    width: 30%;
+    padding: 1%;
+    margin: 0% 10% 0% 17%;
+    font-size: 3.3vw;
+  }
+  
+  #idInput{
+    width: 13%;
+    margin: 0% 1% 0% 18%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+
+  .contractType{
+    font-size: 3.3vw;
+  }
+
+  .contractMethod{
+    font-size: 3.3vw;
+  }
+
+  .helpInfosMethod{
+    width: 70%;
+    margin: 6% 15% 5% 15%;
+    padding: 2%;
+    font-size: 3vw;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .contractAmount{
+    font-size: 3.3vw;
+  }
+  
+  .contractStrike{
+    font-size: 3.3vw;
+  }
+  
+  .contractExpiration{
+    font-size: 3.3vw;
+  }
+  
+  .contractLosses{
+    font-size: 3.3vw;
+  }
+  
+  .earningSubTitle{
+    width: 45%;
+    padding: 1%;
+    margin: auto 0%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 0.1px;
+  }
+  
+  .contractEarning{
+    width: 45%;
+    margin: auto;
+    font-size: 3.3vw;
+  }
+  
+  .helpInfosEarnings{
+    width: 70%;
+    margin: 6% 15% 5% 15%;
+    padding: 2%;
+    font-size: 3vw;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  #executeContract{
+    width: 70%;
+    padding: 1% 0%;
+    margin: 0% 15% 4% 15%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  #refundContract{
+    width: 70%;
+    padding: 1% 0%;
+    margin: 0% 15% 4% 15%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .spaceNeeded{
+    width: 100%;
+    margin: 2% 0%;
+  }
+  
+  .deposits{
+    padding: 1%;
+    font-size: 3.3vw;
+  }
+  
+  .usdcClaimable{
+    margin: 0% 10% 0% 0%;
+    padding: 1%;
+    font-size: 3.3vw;
+  }
+  
+  .mercClaimable{
+    margin: 0% 0% 0% 57%;
+    padding: 1%;
+    font-size: 3.3vw;
+  }
+  
+  .claimUSDC{
+    width: 34%;
+    padding: 1%;
+    margin: 5% 1% 1% 15%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .claimMERC{
+    width: 34%;
+    padding: 1%;
+    margin: 5% 15% 1% 1%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  .withdrawForm{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 2% 15% 0% 15%;
+    font-size: 1.3vw;
+  }
+  
+  .withdrawLabel{
+    display: flex;
+    width: 100%;
+    margin: 0% 0% 4% 0%;
+  }
+  
+  .withdrawAmount{
+    width: 46%;
+    margin: 1% 0%;
+    font-size: 3.3vw;
+    text-align: center;
+  }
+  
+  .withdrawInput{
+    width: 54%;
+    padding: 1%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+  
+  #withdrawButton{
+    width: 100%;
+    padding: 1% 0%;
+    margin: 0% 0% 8% 0%;
+    font-size: 3.3vw;
+    border-radius: 5px;
+    border-width: 2px;
+  }
+
+  /*AnalyticsPage*/
+
+  .analyticsBox{
+    width: 100%;
+    margin: 2% 10% 0% 10%;
+    padding: 3% 0%;
+    border-radius: 30px;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .leftPart{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2% 5% 0% 5%;
+  }
+  
+  .rightPart{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0% 5% 2% 5%;
+  }
+  
+  .analyticsSpace{
+    display: flex;
+    width: 94%;
+    margin: 0% 3% 4% 3%;
+  }
+  
+  .analyticsSubTitle{
+    width: 45%;
+    margin: 0% 5%;
+    font-size: 3.3vw;
+    font-weight: bold;
+  }
+  
+  .analyticsInfos{
+    width: 35%;
+    margin: 0% 5%;
+    font-size: 3.3vw;
+  }
+  
+  .reverseMarketBox{
+    width: 90%;
+    margin: 1% 5% 1% 5%;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .reverseMarketTitle{
+    width: 50%;
+    margin: 1% 25% 1% 25%;
+    font-size: 3.3vw;
+  }
+
+  .reverseMarketSpace{
+    width: 48%;
+    margin: 1%;
+  }
+  
+  .reverseMarketSubTitle{
+    width: 70%;
+    margin: 1%;
+    font-size: 2.3vw;
+  }
+  
+  .reverseMarketInfos{
+    width: 26%;
+    margin: 1%;
+    font-size: 2.3vw;
+  }
+  
+  .graphBox{
+    display: none;
+  }
+
+}
+
